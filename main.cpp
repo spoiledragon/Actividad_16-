@@ -123,6 +123,7 @@ int main()
             cin.ignore();
                 break;
             }
+            fflush(stdin);
         }
 
         else if (opc == "9")
