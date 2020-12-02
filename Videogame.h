@@ -14,6 +14,9 @@ public:
     Videogame();
     Videogame(const std::string &);
 
+    void setNickname(const string&);
+    string getNickname();
+
     void show();
     void addCivilization(const Civilizacion &c);
     

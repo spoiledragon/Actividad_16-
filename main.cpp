@@ -7,6 +7,12 @@ int main()
 {
 
     string opc;
+    cout<<"Bienvenido!"<<endl;
+    cout<<"Para comenzar Ingresa tu Nombre de usuario"<<endl;
+    string nick;
+    getline(cin,nick);
+    vid1.setNickname(nick);
+
     do
     {
         cout << "1) Agregar Civilizacion" << endl;
@@ -34,16 +40,19 @@ int main()
         else if (opc == "2")
         {
             vid1.show();
+            fflush(stdin);
         }
 
         else if (opc == "3")
         {
             vid1.backup();
+            fflush(stdin);
         }
 
         else if (opc == "4")
         {
             vid1.recover();
+            fflush(stdin);
         }
 
         else if (opc == "5")
@@ -63,6 +72,7 @@ int main()
             {
                 vid1.insertX(c1, pos);
             }
+            fflush(stdin);
         }
 
         else if (opc == "6")
@@ -74,6 +84,7 @@ int main()
             cin >> n;
             cin.ignore();
             vid1.start(c1, n);
+            fflush(stdin);
         }
 
         else if (opc == "7")
@@ -91,6 +102,7 @@ int main()
             {
                 vid1.erase(n);
             }
+            fflush(stdin);
         }
 
         else if (opc == "8")
@@ -144,14 +156,17 @@ int main()
         else if (opc == "10")
         {
             vid1.last();
+            fflush(stdin);
         }
         else if (opc == "11")
         {
             vid1.first();
+            fflush(stdin);
         }
         else if (opc == "0")
         {
             break;
+            
         }
 
     } while (true);

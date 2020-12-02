@@ -10,6 +10,16 @@ Videogame::Videogame(const std::string &n){
     NickName=n;
 }
 
+void Videogame::setNickname(const string& n){
+NickName=n;
+}
+
+string Videogame::getNickname(){
+return NickName;
+}
+
+
+
 
 void Videogame::addCivilization(const Civilizacion &c) { civilizaciones.push_back(c); }
 
@@ -20,7 +30,7 @@ void Videogame::insertX(const Civilizacion &c, size_t pos)
 void Videogame::show()
 {   
     //encabezado
-    cout<<"El jugador"<<NickName<<" Posee :"<<civilizaciones.size()<<" Civilizaciones"<<endl;;
+    cout<<"El jugador:" <<getNickname() <<" Posee :"<<civilizaciones.size()<<" Civilizaciones"<<endl;;
     cout << left;
     cout << setw(20) << "Nombre"
          << "||";
